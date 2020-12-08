@@ -76,3 +76,15 @@ git checkout -b 分支名                 # 创建并切换分支；
 git branch -d 分支名                   # 删除分支；
 git branch -D 分支名                   # sure删除分支；
 ```
+
+## git 差异化
+```bash
+git diff --cached                     # 比较暂存区和HEAD
+git diff (-- 文件名)                  # 比较工作区和暂存区的差异
+```
+
+## git 恢复操作
+```bash
+git checkout (-- 文件名)             # 用暂存区覆盖工作区
+git reset HEAD (-- 文件名)           # 用HEAD覆盖暂存区
+```
