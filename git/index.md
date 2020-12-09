@@ -81,10 +81,28 @@ git branch -D 分支名                   # sure删除分支；
 ```bash
 git diff --cached                     # 比较暂存区和HEAD
 git diff (-- 文件名)                  # 比较工作区和暂存区的差异
+git diff (分支名 分支名 --文件名)      # 比较分支文件差异
 ```
 
 ## git 恢复操作
 ```bash
 git checkout (-- 文件名)             # 用暂存区覆盖工作区
 git reset HEAD (-- 文件名)           # 用HEAD覆盖暂存区
+```
+
+## git stash
+将文件存放到stash，而不影响工作区
+```bash
+git stash                           # 将文件存储到堆栈同时恢复工作区
+git stash --list                    # 查看堆栈信息
+git stash pop                       # 将堆栈文件弹出恢复到工作区
+git stash apply                     # 将堆栈文件弹出恢复到工作区, 不改变stash
+```
+
+## git仓库备份
+> 哑协议：直接使用本地文件路径作为仓库的地址；
+> 智能协议：直接使用file://协议文件路径作为仓库的地址；
+
+```bash
+git remote add 远程名 远程地址
 ```
