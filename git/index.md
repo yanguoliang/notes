@@ -4,15 +4,14 @@
 ```
 .git
     |--HEAD                                     # ref: refs/heads/main 分支引用，指向当前分支
-    |--config                                   # 存放git config --global --list相关信信息
+    |--config                                   # 存放git config --local --list相关信信息
     |--object                                   # 存放git相关的对象信息
+    |--index                                    # 暂存区文件
     |--refs                                     # 引用相关
       |--heads                                  # 存放分支
       |  |--master                              # 文件存放一个引用的id,git cat-file -t id查看当前引用文件类型COMMIT
       |--tags                                   # 存放标签
-         |--tag名                               # 存放一个ID，对应heads存放的一个引用id 
-      |--                                   # 存放标签
-         |--tag名                               # 存放一个ID，对应heads存放的一个引用id 
+      |  |--tag名                               # 存放一个ID，对应heads存放的一个引用id
 ```
 ## commit, tree, blob三种对象的关系
 1. 一个commit对应一棵树，是当前项目所有问文件的一个快照；  
